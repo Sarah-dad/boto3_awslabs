@@ -1,0 +1,78 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "logs:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeExportTasks",
+                "logs:DeleteResourcePolicy",
+                "logs:PutResourcePolicy",
+                "logs:PutDestinationPolicy",
+                "logs:CancelExportTask",
+                "logs:TestMetricFilter",
+                "logs:DeleteDestination",
+                "logs:PutDestination",
+                "logs:CreateLogGroup",
+                "logs:DescribeResourcePolicies",
+                "logs:DescribeDestinations"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutAnalyticsConfiguration",
+                "s3:PutAccelerateConfiguration",
+                "s3:DeleteObjectVersion",
+                "logs:*",
+                "s3:ReplicateTags",
+                "s3:RestoreObject",
+                "s3:CreateBucket",
+                "s3:ReplicateObject",
+                "s3:PutEncryptionConfiguration",
+                "s3:DeleteBucketWebsite",
+                "s3:AbortMultipartUpload",
+                "s3:PutBucketTagging",
+                "s3:PutLifecycleConfiguration",
+                "s3:PutObjectTagging",
+                "s3:DeleteObject",
+                "s3:DeleteBucket",
+                "s3:PutBucketVersioning",
+                "s3:DeleteObjectTagging",
+                "s3:PutMetricsConfiguration",
+                "s3:PutReplicationConfiguration",
+                "s3:PutObjectVersionTagging",
+                "s3:DeleteObjectVersionTagging",
+                "s3:PutBucketCORS",
+                "s3:PutInventoryConfiguration",
+                "s3:PutObject",
+                "s3:PutIpConfiguration",
+                "s3:PutBucketNotification",
+                "s3:PutBucketWebsite",
+                "s3:PutBucketRequestPayment",
+                "s3:PutBucketLogging",
+                "s3:ReplicateDelete"
+            ],
+            "Resource": [
+                "arn:aws:logs:*:*:log-group:*",
+                "arn:aws:s3:::bucket-export-logs-s3",
+                "arn:aws:s3:::*/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "logs:*",
+            "Resource": "arn:aws:logs:*:*:log-group:*:*:*"
+        }
+    ]
+}
